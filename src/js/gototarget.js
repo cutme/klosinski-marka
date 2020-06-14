@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded',function() {
           topbar = document.getElementsByClassName('js-top')[0];
 
 	const speed_calculate = function (target) {
-    	let base_speed  = 60,
+    	let base_speed  = 30,
     		page_offset = window.pageYOffset || document.documentElement.scrollTop,
         	offset_diff = Math.abs(target - page_offset),
         	speed = ((offset_diff * base_speed) / 1000)/100;
