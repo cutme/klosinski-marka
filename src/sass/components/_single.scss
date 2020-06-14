@@ -1,0 +1,28 @@
+.c-single {
+    padding: 100px 0;
+    
+    @media ( max-width: $tablet + px ) {
+    	padding-top: tablet(100);
+    }
+    
+    @media ( max-width: $smartphone + px ) {
+    	padding-top: 0;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        margin-top: -48px;
+    }
+    
+    .o-header {
+        .o-lead--2 {
+            margin-bottom: 48px;
+            
+            @media ( min-width: $tablet + 1px ) {
+            	margin: {
+                    left: -50px;
+                    right: -50px;
+                }
+            }
+        }
+    }
+}

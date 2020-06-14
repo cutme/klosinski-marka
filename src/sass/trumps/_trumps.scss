@@ -1,0 +1,179 @@
+html:not(.ie) {
+    
+    .anim {
+        
+
+        opacity: 0;
+        
+        &--left {
+            transform: translate3d(-50px, 0, 0);
+        }
+        
+        &--right {
+            transform: translate3d(50px, 0, 0);
+        }
+        
+        &--scale {
+            transform: scale3d(0, 1, 1);
+        }
+        
+        &--up {
+            transform: translate3d(0, 50px, 0);
+        }
+    }
+
+
+    .is-loaded {
+        .anim {
+            
+            transition: all 600ms ease-out;
+            
+            &--delay1 {
+                transition-delay: 150ms;
+            }
+            
+            &--delay2 {
+                transition-delay: 250ms;
+            }
+            
+            &--delay3 {
+                transition-delay: 350ms;
+            }
+            
+            &--delay4 {
+                transition-delay: 450ms;
+            }
+            
+                                
+            &--visible {
+                transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+
+// Margins
+
+.bottom--72 {
+    margin-bottom: 72px;
+    
+    @media ( max-width: $small + px ) {
+    	margin-bottom: 48px;
+    }
+}
+
+.bottom--112 {
+    margin-bottom: 112px;
+    
+    @media ( max-width: $smartphone + px ) {
+    	margin-bottom: 56px;
+    }
+}
+
+.bottom--160 {
+    margin-bottom: 160px;
+    
+    @media ( max-width: $base + 64px ) {
+        margin-bottom: base(160);
+    }
+    
+    @media ( max-width: $smartphone + px ) {
+        margin-bottom: 72px;
+    }
+}
+
+
+.overflow {
+    &--hidden {
+        overflow: hidden;
+    }
+}
+
+
+// Text
+
+.aligncenter {
+    text-align: center;
+}
+
+img.aligncenter,
+div.aligncenter {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.u-cover {
+    transition: all 500ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}
+
+.no-js {
+    .u-cover {
+        display: none;
+    }
+}
+
+
+// Backgrounds
+
+.bg-black {
+    background-color: $c-black-01;
+    color: white;
+}
+
+.bg-gray {
+    background-color: $c-gray-01;
+}
+
+.bg-yellow {
+    background-color: $c-primary;
+}
+
+
+
+.is-h {
+    display: none;
+}
+
+
+noscript {
+    display: block;
+    position: relative;
+    z-index: 999;
+    padding: 20px;
+    text-align: center;
+}
+
+
+// Mobile / desktop
+/*
+
+.mobile {
+    .desktop & {
+        display: none;
+    }
+}
+
+.desktop {
+    .mobile & {
+        display: none;
+    }
+}
+*/

@@ -1,0 +1,81 @@
+.c-boxes {
+        
+    &__items {
+        @extend %flex;
+        @extend %flex-wrap;
+        width: calc(100% + 32px);
+        margin: 0 -16px -32px -16px;
+        
+        @media ( max-width: $tablet + px ) {
+            width: calc(100% + 16px);
+        	margin: 0 -8px -16px -8px;
+        }
+        
+        [class^="icon-"] {
+            @extend %flex;
+            @extend %flex-xy;
+            width: 56px; height: 56px;
+            background-color: $c-primary;
+            margin-right: 44px;
+            border-radius: 50%;
+            font-size: rem(14);
+            color: $c-black-01;
+        }
+        
+        
+        .icon-box {
+            padding-left: 2px;
+        }
+        
+        .icon-check-circle {
+            font-size: rem(23);
+        }
+        
+        .icon-edit {
+            font-size: rem(19);
+        }
+        
+        .icon-layout {
+            font-size: rem(20);
+        }
+        
+        .icon-message-square {
+            font-size: rem(20);
+        }
+        
+        .icon-smile {
+            padding-left: 3px;
+            font-size: rem(22);
+        }
+        
+        .icon-video {
+            font-size: rem(16);
+        }
+        
+        .icon-briefcase {
+            padding-left: 2px;
+            font-size: rem(20);
+        }
+        
+        .icon-sunrise {
+            padding-left: 2px;
+            font-size: rem(23);
+        }
+        
+        .icon-user-check {
+            padding-left: 4px;
+            font-size: rem(22);
+        }
+        
+        .o-box {
+            width: grid(368, 1200);
+            min-height: 344px;
+            padding: 36px 32px 32px 32px;
+            margin: 0 grid(16, 1200) 32px grid(16, 1200);
+            
+            @media ( max-width: $base + 64px ) {
+            	margin-bottom: base(32);
+            }
+        }
+    }
+}

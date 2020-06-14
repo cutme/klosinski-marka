@@ -1,0 +1,53 @@
+.c-why {
+
+    &__cta {
+        padding-left: 80px;
+    }
+
+    .o-cols {
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            &:last-of-type {
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    border-left: 1px solid $c-black-01;
+                    padding-left: 60px;
+                    padding-right: 60px;
+                }
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                width: 100%;
+            }
+        }
+    }
+
+    .o-header {
+        
+        img {
+            background-color: $c-primary;
+            border-radius: 50%;
+            margin-bottom: 50px;
+        }
+
+        .o-lead {
+            max-width: 360px;
+            
+            &--3 {
+                line-height: 1em;
+            }
+        }
+    }
+    
+    .o-list {
+        margin-bottom: 80px;
+    }
+    
+    .o-section {
+        padding-top: 150px;
+    }
+}

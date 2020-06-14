@@ -1,0 +1,42 @@
+.c-together {
+    
+    &__photos {
+    
+        .o-cols {
+            
+            &__item {
+                &:first-of-type {
+                    img {
+                        margin-right: 0;
+                        margin-left: auto;
+                        
+                        @media ( max-width: $smartphone + px ) {
+                        	margin: {
+                            	left: auto;
+                            	right: auto;
+                            }
+                        }
+                    }
+                }
+                
+                img {
+                    &:not(:last-of-type) {
+                        margin-bottom: 32px;
+                    }
+                    
+                    @media ( max-width: $smartphone + px ) {
+                    	margin: {
+                        	bottom: 32px;
+                        	left: auto;
+                        	right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 0;
+    }
+}

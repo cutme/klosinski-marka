@@ -1,0 +1,36 @@
+
+    <div class="c-content">
+        <div class="o-wrap">
+            <div class="o-section">
+
+                <div class="o-header aligncenter bottom--160">
+                    <div class="splitting--up js-split">                    
+                        <h5 class="o-lead o-lead--5">Przygotowania i rozpoczynanie</h5>
+                        <h3 class="o-lead o-lead--2">Wszystkie materiały</h3>          
+                    </div>
+
+                    <div class="o-article o-article--huge">
+                        <p>Poniżej znajdziesz listę wszystkich materiałów z&nbsp;tej kategorii. Możesz przeglądać je wg kolejności publikacji albo wybrać jeden z filtrów.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="o-cols o-cols--sidebar" id="content">
+                    <div class="o-cols__item">
+                        
+                        <% include ../content/filters %>
+                        
+                    </div>
+                    
+                    <div class="o-cols__item">
+                        
+                        <% include ../content/results %>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <% include ../loadmore %>
+    </div>

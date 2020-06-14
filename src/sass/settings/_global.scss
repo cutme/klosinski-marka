@@ -1,0 +1,53 @@
+// Fonts
+
+$adelle:		    'AdelleSans', sans-serif;
+$icomoon:           'icomoon';
+$termina:           'termina', serif;
+$text:		        $adelle;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$heavy:             800;
+
+
+$z-index: (
+    apla:             1040,
+    navmenu:          1050,
+    hamburger:      100,
+    header:         30,
+	top           : 40,
+	nav           : 50,
+	logo          : 60
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	20;
+$base:				1168;
+
+
+
+// RWD
+
+$menu:                 1140;
+$tablet:               1024;
+$tablet_portrait:       768;
+$smartphone:			640;
+$smartphone_portrait:	500;
+$small:	                400;

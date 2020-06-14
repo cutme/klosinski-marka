@@ -1,0 +1,122 @@
+body {
+	@include antialias;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $light;
+	}
+	color: $c-black-01;
+
+	@media ( max-width: $tablet + px ) {
+    	font-size: rem(18);
+    }
+    
+    @media ( max-width: $smartphone + px ) {
+        font-size: rem(16);
+    }
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	.is-loaded & {
+        @extend %anim;
+    }
+	
+	&:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    font-size: #{$base-font-size}px;
+}
+
+
+::selection {
+	background-color: var(--primary-color);
+	color: $c-black-01;
+}
+
+em {
+    font-style: italic;
+}
+
+hr {
+    @extend %rel;
+    width: 100%;
+    border: none;
+
+    &.dot {
+        height: 72px;
+        margin: {
+            top: 72px;
+            bottom: 72px;
+        }
+        
+        @media ( max-width: $base + 64px ) {
+            height: base(72);
+            margin: {
+                top: base(72);
+                bottom: base(72);
+            }
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	height: 32px;
+        	margin: {
+            	top: 48px;
+            	bottom: 48px;
+        	}
+        }
+        
+        &:after {
+            @extend %abs-pseudo;
+            @extend %abs-xy;
+            width: 8px; height: 8px;
+            background-color: $c-primary;
+            border-radius: 50%;
+        }
+    }
+
+    &.line {
+        height: 32px;
+        background-color: $c-primary;
+        margin: {
+            top: 112px;
+            bottom: 56px;
+        }
+        
+        @media ( max-width: $base + px ) {
+            height: base(32);
+        	margin: {
+                top: base(112);
+                bottom: base(112);
+            }
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	height: 18px;
+        	margin: {
+            	top: 48px;
+            	bottom: 48px;
+        	}
+        }
+    }
+}
+
+strong {
+    font-weight: $semibold;
+}
+
+u {
+    text-decoration-color: var(--primary-color);
+}
+
+

@@ -1,0 +1,77 @@
+.c-content {
+    
+    [class^="icon-"] {
+        @extend %flex;
+        @extend %flex-xy;
+        border-radius: 50%;
+    }
+    
+    &__more {
+        display: block;
+        height: 160px;
+        background-color: $c-black-01;
+        text-align: center;
+        
+        @media ( max-width: $smartphone + px ) {
+            height: 112px;
+        }
+        
+        &:hover {
+            background-color: $c-primary;
+            
+            .o-loadmore {
+                .icon-plus {
+                    background-color: $c-black-01;
+                    color: white;
+                }
+                
+                span {
+                    color: $c-black-01;
+                }
+            }
+        }
+    }    
+
+    .o-cols {
+        @extend %media-icons;
+        @extend %rel;
+        
+
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            &:first-of-type {
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                   
+                    width: 100%;
+                    height: 64px;
+                    background-color: white;
+                    margin-bottom: 48px;
+                    margin-top: 100px;
+                }
+            }
+        }
+    }
+    
+    .o-lead {
+        &--6 {
+            @extend %lead--6;
+        }
+        
+        &--6,
+        &--3 {
+            margin-bottom: 48px;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	margin-bottom: 24px;
+            }
+        }
+    }
+
+    .o-section {
+        padding-bottom: 80px;
+    }
+}

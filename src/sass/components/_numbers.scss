@@ -1,0 +1,58 @@
+.c-numbers {
+    overflow: auto;
+    
+    p {
+        @media ( max-width: $tablet + px ) {
+        	font-size: rem(18);
+        }
+    }
+    
+    .home & {
+        padding-top: 112px;
+    }
+    
+    .o-box {
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            flex-direction: row;
+        	width: 100%;
+        	min-height: 0;
+        	height: auto;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding: 24px;
+        }
+        
+        .o-header {
+            @media ( max-width: $smartphone + px ) {
+            	text-align: left;
+            }
+        }
+    }
+    
+    .o-lead {
+        &--4 {
+            margin-bottom: 32px;
+            font-size: rem(26);
+            
+            @media ( max-width: $tablet + px ) {
+                font-size: rem(24);
+            }
+            
+            
+        }
+    }
+    
+    .icon-users {
+        font-size: rem(20);
+    }
+    
+    .icon-book-open {
+        font-size: rem(20);
+    }
+    
+    .icon-briefcase {
+        padding-right: 1px;
+    }
+}

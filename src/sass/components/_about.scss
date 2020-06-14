@@ -1,0 +1,33 @@
+.c-about {
+   
+    .o-cols {
+        &__item {
+            &:first-of-type {
+                
+                @media ( min-width: $smartphone + 1px ) {
+                	padding-right: 32px;
+                    margin: 0 0 0 auto;
+                }
+                
+                
+                img {
+                    @media ( min-width: $smartphone + 1px ) {
+                        margin: 0 0 0 auto;
+                    }
+                    
+                    @media ( max-width: $smartphone + px ) {
+                        margin: 0 auto 40px auto;
+                    }
+                    
+                }
+            }
+            
+            &:last-of-type {
+                
+                @media ( min-width: $smartphone + 1px ) {
+                    padding-left: 32px;
+                }
+            }
+        }
+    }
+}

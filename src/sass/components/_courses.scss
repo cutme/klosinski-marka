@@ -1,0 +1,44 @@
+.c-courses {    
+    &__items {
+        .o-cols {
+            
+            &:first-of-type {
+                border-top: 1px solid $c-gray-01;
+            }
+            
+            &:not(:last-of-type) {
+                border-bottom: 1px solid $c-gray-01;
+            }
+        }
+    }
+    
+    .o-article {
+        margin: 48px 0;
+
+        @media ( max-width: $smartphone + px ) {
+        	text-align: center;
+        }
+
+    }
+    
+    .o-cols {
+        padding: 72px 0;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding: 36px 0;
+        }
+    }
+    
+    .o-section {
+        .page-template-page-about & {
+            padding-top: 0;
+        }
+    }
+
+    .title {
+        line-height: 1.1em;
+        font-size: rem(26);
+    }
+}
+
+

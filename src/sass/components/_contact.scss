@@ -1,0 +1,42 @@
+.c-contact {
+    
+    &__img {        
+        @media ( min-width: $smartphone + 1px ) {
+            margin-bottom: -112px;
+        }
+        
+        img {
+            max-width: none;
+            
+            @media ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
+                
+            }
+        }
+    }
+    
+    .o-cols {
+        @media ( max-width: $smartphone + px ) {
+        	display: block;
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 48px;
+    }
+    
+    .o-more {
+        margin-bottom: 48px;
+        
+        @media ( max-width: $smartphone + px ) {
+            margin-bottom: 72px;
+        }
+    }
+    
+    .o-section {
+        margin-bottom: 70px;
+        
+        @media ( min-width: $smartphone + 1px ) {
+            padding: 112px 0 0 0;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.c-cattop {
+    padding-top: 112px;
+    
+    @media ( max-width: $base + px ) {
+    	padding-top: base(112);
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	padding-top: 0;
+    }
+
+
+    img {
+        margin: 0 auto;
+    }
+}

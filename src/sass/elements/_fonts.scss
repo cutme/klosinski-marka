@@ -1,0 +1,19 @@
+@include font-face-db( "icomoon", "icomoon", normal, normal);
+@include font-face-db( "AdelleSans", "AdelleSans-Light", $light, normal);
+@include font-face-db( "AdelleSans", "AdelleSans-LightItalic", $light, italic);
+@include font-face-db( "AdelleSans", "AdelleSans", $regular, normal);
+@include font-face-db( "AdelleSans", "AdelleSans-SemiBold", $semibold, normal);
+
+//@import url("https://p.typekit.net/p.css?s=1&k=pmz5liy&ht=tk&f=28977.28992&a=2373983&app=typekit&e=css");
+
+@font-face {
+font-family:"termina";
+src:url("https://use.typekit.net/af/da851f/00000000000000003b9adf1a/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/da851f/00000000000000003b9adf1a/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/da851f/00000000000000003b9adf1a/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;
+}
+
+@font-face {
+font-family:"termina";
+src:url("https://use.typekit.net/af/9a8a6b/00000000000000003b9adf29/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("woff2"),url("https://use.typekit.net/af/9a8a6b/00000000000000003b9adf29/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("woff"),url("https://use.typekit.net/af/9a8a6b/00000000000000003b9adf29/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n8&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:800;
+}

@@ -1,0 +1,112 @@
+.o-hamburger {
+    @extend %anim;
+    @extend %abs;
+    @extend %flex;
+    @extend %flex-xy;
+    @extend %flex-shrink;
+    left: 32px;
+    width: 72px; height: 48px;
+    background-color: $c-gray-01;
+    border-radius: 24px;
+    cursor: pointer;
+    
+    @media ( min-width: $menu + 1px ) {
+        display: none;
+    }
+    
+    @media screen and ( max-width: $smartphone_portrait + px ) {
+        width: 50px;
+    }
+
+    i {
+        @extend %anim;
+        @extend %rel;
+        display: block;
+        width: 22px;
+        height: 14px;
+        border-top: 2px solid $c-black-02;
+        
+        &:after, &:before {
+            @extend %abs;
+            @extend %abs-after;
+            @extend %anim;
+            left: 0;
+            width: 100%; height: 2px;
+            background-color: $c-black-02;
+        }
+        
+        &:before {
+            @extend %abs-y;
+            margin-top: -1px;
+        }
+        
+        &:after {
+            bottom: 0;
+        }
+    }
+    
+    
+    &:hover {
+        .desktop & {
+            background-color: $c-black-01;
+            border-color: transparent;
+            color: white;
+            
+            
+            .navbar--base & {
+                .category & {
+                    color: $c-black-01;
+                    background-color: white;
+                }
+            }
+        }
+/*
+        
+        .navbar--floating & {
+            .category & {
+                color: white;
+                background-color: $c-black1;
+            }
+        }
+*/
+        
+        i {
+            border-top-color: white;
+            
+            &:after, &:before {
+                background-color: white;
+            }
+            /*
+
+            .navbar--base & {
+                .category & {
+                    border-top-color: $c-black1;
+                
+                    &:after, &:before {
+                        background-color: $c-black1;
+                    }
+                }
+            }
+*/
+        }
+    }
+    
+    &.is-active {
+        border-color: $c-gray-01;
+        
+        i {
+            border: transparent;
+            
+            &:after {
+                display: none;
+            }
+            
+            //.category & {      
+             //   &:after, &:before {
+             //       background-color: white;
+             //   }
+          //  }
+        }
+    }
+}
+

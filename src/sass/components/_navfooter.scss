@@ -1,0 +1,39 @@
+.c-navfooter {
+    text-align: center;
+
+    ul {
+        @extend %flex;
+        @extend %flex-x;
+        @extend %flex-wrap;
+        margin-bottom: 72px;
+        
+        @media ( max-width: $smartphone + px ) {
+            display: block;
+        }
+        
+        li {
+            padding: 0 16px;
+            
+            &:not(:last-child) {
+                @media ( max-width: $smartphone + px ) {
+                    margin-bottom: 16px;
+                }
+            }
+
+            a {
+                @extend %lead;
+                @extend %lead--6;
+                display: block;
+                letter-spacing: .5px;
+                
+                &:hover {
+                    .desktop & {
+                        @media ( min-width: $smartphone + 1px ) {
+                            transform: translate3d(0, -5px, 0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

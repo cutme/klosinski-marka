@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="29.225" viewBox="0 0 20 29.225">
+  <g id="watch" transform="translate(-3.66)">
+    <ellipse id="Ellipse_102" data-name="Ellipse 102" cx="9" cy="8.5" rx="9" ry="8.5" transform="translate(4.66 5.913)" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <path id="Path_3011" data-name="Path 3011" d="M12,9v3.713l1.856,1.856" transform="translate(1.636 1.9)" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+    <path id="Path_3012" data-name="Path 3012" d="M18.655,21.233l-.433,4.74a2.475,2.475,0,0,1-2.475,2.252H10.388a2.475,2.475,0,0,1-2.475-2.252l-.433-4.74M7.492,7.992l.433-4.74A2.475,2.475,0,0,1,10.388,1h5.383a2.475,2.475,0,0,1,2.475,2.252l.433,4.74" transform="translate(0.563 0)" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,0 +1,36 @@
+.o-lead {
+    @extend %lead;
+    
+    &--1 {
+        @extend %lead--1;   // 60
+    }
+
+    &--2 {
+        @extend %lead--2;   // 48
+    }
+    
+    &--3 {
+        @extend %lead--3;   // 22
+    }
+    
+    &--4 {
+        @extend %lead--4;   // 20
+    }
+    
+    &--5 {
+        @extend %lead--5;   // 16
+    }
+    
+    &--6 {
+        @extend %lead--6;   // 12
+    }
+
+
+    br {
+        @media ( max-width: $smartphone + px ) {
+        	display: none;
+        }
+    }
+}
+
+

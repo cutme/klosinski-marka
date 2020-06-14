@@ -1,0 +1,85 @@
+.c-community {
+    
+    .o-box {
+        justify-content: flex-start;
+        border: 1px solid $c-gray-01;
+        margin-bottom: 32px;
+        padding: 32px 32px 48px 32px;
+        
+        @media ( max-width: $base + px ) {
+        	margin-bottom: base(32);
+        }
+        
+        .author {
+            @extend %flex;
+            @extend %flex-y;
+            margin-bottom: 32px;
+
+            img {
+                margin-right: 32px;
+                border-radius: 50%;
+            }
+        }
+        
+        .review {
+            font-size: rem(16);
+            line-height: 1.5em;
+            color: $c-black-03;
+        }
+    }
+
+    .o-cols--3 {
+        .o-cols {
+            &__item {
+                width: 368px;
+                margin: 0 16px;
+//                margin: 0 calc((1168px - 3*368px) / 6);
+                //max-width: 368px;
+                
+                &:nth-of-type(odd) {
+                    
+                    @media ( min-width: $tablet + 1px ) {
+                        padding-top: 112px;	
+                    }
+                }
+                
+                @media ( max-width: $tablet + px ) {
+                	display: flex;
+                	//width: 768px;
+                	width: auto;
+                	margin: 0;
+                }
+                
+                .o-box {
+                    
+                    width: 100%;
+
+                    @media ( max-width: $tablet + px ) {
+                        width: 368px;
+                        margin: 0 8px;
+                    }
+                }
+                
+                .o-lead {
+                    &--5 {
+                        font-weight: $heavy;
+                    }
+                }
+            }
+        }
+    }
+
+    .o-wrap {
+    //width: auto;
+        @media ( min-width: $tablet + 1px ) {
+            padding: {
+                left: 16px;
+                right: 16px;
+            }
+        }
+    }
+
+    .main-carousel {
+        z-index: -1;
+    }
+}

@@ -1,0 +1,16 @@
+.o-more {
+    @extend %abs;
+    display: block;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    
+    &:before {
+        @extend %abs;
+        @extend %flex;
+        @extend %flex-xy;
+        width: 100%; height: 100%;
+        transform: rotate(90deg);
+        font-size: rem(16);
+        color: white;
+    }
+}

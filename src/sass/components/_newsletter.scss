@@ -1,0 +1,94 @@
+.c-newsletter {
+    
+    ::-webkit-input-placeholder { color: $c-black-01; }
+    :-moz-placeholder { color: $c-black-01; }
+    ::-moz-placeholder { color: $c-black-01; }
+    :-ms-input-placeholder { color: $c-black-01; }
+
+    @media ( max-width: $smartphone + px ) {
+        margin-bottom: 160px;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+    	margin-bottom: 80px;
+    }
+
+    &__img {
+        transform: translateY(160px);
+        
+        @media ( max-width: $tablet + px ) {
+        	transform: translateY( tablet(160) );
+        }
+        
+        @media ( min-width: $smartphone + 1px ) and ( max-width: $tablet_portrait + px ) {
+        	transform: translateY(0);
+        	margin-bottom: 160px;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	transform: translateY(160px);
+        }
+        
+        img {
+            
+            @media ( min-width: $tablet + 1px ) {
+                max-width: none;	
+            }
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 0;
+    }
+    
+    &__form {
+        
+        @media ( max-width: $smartphone + px ) {
+        	padding-top: 48px;
+        }
+        
+        input[type=text],
+        input[type=email] {
+            background-color: transparent;
+            border-bottom: 1px solid $c-black-01;
+            height: 48px;
+            margin-bottom: 32px;
+        }
+        
+        label {
+            @extend %lead;
+            @extend %lead--6;
+        }
+        
+        .o-btn {
+            margin-top: 40px;
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+            }
+        }
+        
+        .o-cols {
+            @extend %flex-end;
+
+            &__item {
+                &:first-of-type {
+                    
+                    @media ( min-width: $smartphone + 1px ) {
+                        padding-bottom: 160px;
+                    }
+                    
+                    @media ( max-width: $smartphone + px ) {
+                    	margin-bottom: -72px;
+                    }
+                }
+                
+                &:last-of-type {
+                    @media ( min-width: $smartphone + 1px ) {
+                        padding-left: 56px;
+                    }
+                }
+            }
+        }
+    }
+}

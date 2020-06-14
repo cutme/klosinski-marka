@@ -1,0 +1,40 @@
+.o-box {
+    //@extend %flex;
+    //@extend %flex-column;
+    //@extend %flex-spacebetween;
+    //@extend %rel;
+    width: 368px;
+    background-color: white;
+    overflow: hidden;
+        
+    &:before {
+        @extend %abs-pseudo; z-index: -1;
+        @extend %anim;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: $c-black-01;
+        transform: translate3d(0, 100%, 0);
+        opacity: 0;
+    }
+        
+    &__info {
+
+    }
+}
+
+a.o-box {
+    &:hover {
+        .desktop & {
+            color: white;
+
+            [class^="icon-"] {
+                color: $c-black-01;
+            }
+            
+            &:before {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    }
+}

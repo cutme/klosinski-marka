@@ -1,0 +1,104 @@
+.c-presale {
+    
+    ol {
+        max-width: 740px;
+        margin: 0 auto;
+        counter-reset: section;
+        
+        li {
+            @extend %rel;
+            @extend %flex;
+            @extend %flex-y;
+            @extend %flex-wrap;
+            width: 50%;
+            
+            &:after {
+                @extend %lead;
+                @extend %lead--6;
+                @extend %flex;
+                @extend %flex-y;
+                width: 100%;
+                min-height: 88px;
+                margin: 40px 0;
+                content: attr(data-info);
+            }
+            
+            &:before {
+                @extend %lead;
+                @extend %flex;
+                @extend %flex-xy;
+                @extend %flex-shrink;
+                width: 92px; height: 92px;
+                background-color: $c-primary;
+                border-radius: 50%;
+                font: {
+                    size: rem(36);
+                    weight: $heavy;
+                }
+                counter-increment: section;
+                content: counter(section);
+            }
+            
+            &:after {
+                border-left: 1px solid $c-gray-02;
+                padding: {
+                    left: 20px;
+                    right: 60%;
+                }
+            }
+
+            .o-lead {
+                margin-bottom: .5em;
+                font: {
+                    size: rem(14);
+                    weight: $heavy;
+                }
+            }
+            
+            &:nth-of-type(odd) {
+                margin: 0 0 0 auto;
+                
+                &:before {
+                    margin-left: -46px;
+                    margin-right: 60px;
+                }
+            }
+            
+            &:nth-of-type(even) {
+                flex-direction: row-reverse;
+                
+                &:before {
+                    margin-right: -46px;
+                    margin-left: 60px;
+                }
+                
+                &:after {
+                    transform: translateX(100%);
+                }
+
+                .c-presale__info {
+                    text-align: right;
+                }
+            }
+            
+            &:last-child {
+                margin-bottom: 120px;
+                
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    &__info {
+        flex: 1;
+    }
+    
+    .o-btn {
+        padding: {
+            left: 80px;
+            right: 80px;
+        }
+    }
+}

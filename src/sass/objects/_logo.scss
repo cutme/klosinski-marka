@@ -1,0 +1,9 @@
+.o-logo {
+	@extend %rel;
+	@include z-index(logo);
+    display: block;
+    
+    .is-sticked & {
+        width: 140px;
+    }
+}

@@ -1,0 +1,74 @@
+.c-nav {
+    @extend %flex;
+    @extend %flex-y;
+
+    &__menu {
+        @extend %flex;
+        
+        @media ( max-width: $menu + px ) {
+        	display: none;
+        }
+
+        li {
+            
+            @media ( min-width: $menu + 1px ) {
+                padding: 0 20px;
+            }
+            
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font: {
+                family: $termina;
+                size: 12px;
+                weight: $regular;
+            }
+            
+            
+            @media ( max-width: $menu + px ) {
+                border-bottom: 1px solid $c-gray-04;
+                letter-spacing: 1px;
+                font: {
+                    size: 12px;
+                    weight: $regular;
+                }
+            }
+
+            &:hover {
+                .desktop & {
+                    border-bottom-color: $c-black-01;
+                }
+            }
+        }
+
+//        @extend %anim;
+        
+        
+        
+    }
+
+    /*
+position: fixed;
+    left: 0; top: 0;
+    width: 520px;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    transform: translate3d(-100%, 0, 0);
+    padding-left: 32px;
+    
+    .is-loaded & {
+        transition-duration: 700ms;
+        transition-delay: 250ms;
+    }
+    
+    &.is-visible {
+        transform: translate3d(0, 0, 0);
+    }
+*/
+}

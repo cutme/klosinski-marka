@@ -1,0 +1,62 @@
+.c-martyna {
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    &__contact {
+        .o-lead {
+            margin-bottom: 3.3em;
+            
+            @media ( max-width: $small + px ) {
+            	margin-bottom: 2em;
+            }
+        }
+    }
+    
+    &__photo {
+        @extend %rel;
+        
+        &:after {
+            @extend %abs-pseudo; z-index: -1;
+            left: 0; top: 50%;
+            width: 100%; height: 50%;
+            background-color: $c-gray-01;
+        }
+
+        img {
+            border-radius: 50%;
+            margin: 0 auto;
+            width: grid(600, 1000);
+        }
+    }
+    
+    .o-section {
+        padding: 120px 32px;
+        
+        @media ( max-width: $tablet + px ) {
+        	padding: 120px 15px;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding: {
+            	top: 60px;
+            	bottom: 60px;
+        	}
+        }
+    }
+    
+    .o-social {
+        [class^="icon-"] {
+            width: 56px; height: 56px;
+            background-color: white;
+            font-size: rem(20);
+        }
+        
+        ul {
+            @extend %flex-x;
+        }
+        
+        li {
+            margin: 0 8px;
+        }
+    }
+}

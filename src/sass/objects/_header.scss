@@ -1,0 +1,49 @@
+.o-header {
+    
+    @media ( max-width: $smartphone + px ) {
+    	text-align: center;
+    }
+    
+    &.aligncenter {
+        max-width: 780px;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
+
+    .o-article {
+            max-width: 760px;
+            margin: 0 auto;
+        
+        font-weight: $light;
+    }
+    
+    .o-cols {
+        &__item {
+            &:last-of-type {
+                
+                @media ( min-width: $smartphone + 1px ) {
+                    padding: 48px 0 0 56px;   
+                }             
+            }
+        }
+    }
+    
+    .o-lead {
+        &--5,
+        &--6 {
+           margin-bottom: 32px;
+           
+           @media ( max-width: $tablet_portrait + px ) {
+               margin-bottom: 16px;
+           }
+        }
+        
+        &--2 {
+//            margin-bottom: 32px;
+            margin-bottom: 64px;
+        }
+    }
+}
+

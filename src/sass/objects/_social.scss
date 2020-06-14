@@ -1,0 +1,27 @@
+.o-social {
+    ul {
+        @extend %flex;
+    }
+    
+    li {
+        &:not(:first-child) {
+            margin-left: 16px;
+        }
+    }
+    
+    [class^="icon-"] {
+        @extend %flex;
+        @extend %flex-xy;
+        width: 48px; height: 48px;
+        background-color: $c-gray-01;
+        border-radius: 50%;
+        font-size: rem(16);
+        
+        &:hover {
+            .desktop & {
+                background-color: $c-black-01;
+                color: white;
+            }
+        }
+    }
+}

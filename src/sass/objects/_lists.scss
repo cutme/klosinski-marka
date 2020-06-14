@@ -1,0 +1,71 @@
+.o-list {
+    @extend %list-arrow;
+
+    a {
+        @extend %rel;
+        display: inline;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px solid $c-gray-04;
+        font: {
+            family: $termina;
+            size: rem(14);
+            weight: $regular;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	font-size: rem(12);
+        }
+        
+        &:hover {
+            .desktop & {
+                border-bottom-color: $c-black-01;
+            }
+        }
+    }
+    
+    &--grayarrows {
+        li {
+            &:before {
+                top: -2px;
+                background-color: $c-gray-01;
+            }
+        }
+    }
+    
+    &--graychecks {
+        li {
+            &:before {
+                background-color: $c-gray-01;
+            }
+        }
+    }
+    
+    &--yellowarrows {
+        li {
+            &:before {
+                background-color: $c-primary;
+            }
+        }
+    }
+    
+    &--graychecks,
+    &--yellowchecks {
+        li {
+            &:before {
+                top: 0;
+                padding-top: 2px;
+                font-size: rem(10);
+                content: "\e915";
+            }
+        }
+    }
+    
+    &--yellowchecks {
+        li {
+            &:before {
+                background-color: $c-primary;
+            }
+        }
+    }    
+}

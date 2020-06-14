@@ -1,0 +1,46 @@
+.c-moreaboutme {
+    
+    &__img {
+        margin-bottom: -112px;
+        
+        img {
+            @media ( min-width: $smartphone + 1px ) {
+	            max-width: none;
+            }
+        }
+    }
+    
+    .o-btn {
+        width: 192px;
+    }
+    
+    .o-cols {
+        @media ( max-width: $smartphone + px ) {
+        	display: block;
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 48px;
+    }
+    
+    .o-more {
+        margin-bottom: 48px;
+    }
+    
+    .o-section {
+        margin-bottom: 72px;
+        
+        @media ( min-width: $smartphone + 1px ) {
+            padding: 112px 0 0 0;        	
+        }
+
+        
+        
+    }
+    
+    .title {
+        line-height: 28px;
+        font-size: rem(26);
+    }
+}

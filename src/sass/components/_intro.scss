@@ -1,0 +1,89 @@
+.c-intro {
+    margin-bottom: 144px;
+    padding-top: 140px;
+/*
+    padding: {
+        top: 140px;
+        bottom: 140px;
+    }
+*/
+
+    @media ( max-width: $smartphone + px ) {
+    	text-align: center;
+    }
+
+    .c-post {
+        &--1 {
+            padding-top: 160px;            
+        }
+    }
+    
+    .o-article {
+/*
+        margin-bottom: 142px;
+        
+        @media ( max-width: $smartphone + px ) {
+        	margin-bottom: 36px;
+        }
+*/
+    }
+    
+    .o-cols {       
+        &__item {            
+            
+            &:last-of-type {
+                margin-bottom: -144px;
+                padding-left: 56px;
+                padding-top: 56px;
+                
+                @media ( max-width: $base + 64px ) {
+                	padding: base(56) 0 0 base(56);
+                }
+                
+                @media ( max-width: $smartphone + px ) {
+                	padding: 0 0 48px 0;
+                }
+                
+                img {
+                    max-width: none;
+                    
+                   /// transform: translate3d(0, 160px, 0);
+                    
+                    @media ( max-width: $base + 64px ) {
+                        width: base(728);
+                    }
+                    
+                    @media ( max-width: $tablet + px ) {
+                    	width: 605px;
+                    }
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                        font-size: tablet_portrait(605);
+                    }
+                    
+                    @media ( max-width: $smartphone + px ) {
+                    	max-width: 100%;
+                    }
+                }
+            }
+        }
+    }  
+    
+   /*
+ .o-lead {
+        margin-bottom: .8em;
+    } 
+*/
+    
+    .o-more {
+        left: 32px; bottom: 0;
+        background-color: $c-black-01;
+        transform: translateY(50%);
+    }
+    
+    .o-wrap {
+        @extend %rel;
+    }
+}
+
+

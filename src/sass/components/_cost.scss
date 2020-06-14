@@ -1,0 +1,97 @@
+.c-cost {
+    
+    &__content {
+        max-width: 680px;
+        background-color: white;
+        margin: 0 auto;
+        padding: 0 90px 120px 90px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: 0 45px 120px 45px;
+        }
+    }
+    
+    &__price {
+        @extend %flex;
+        @extend %flex-xy;
+        @extend %flex-column;
+        @extend %flex-wrap;
+        width: 284px; height: 284px;
+        background-color: $c-black-01;
+        border-radius: 50%;
+        margin: 220px auto -50px auto;
+        padding-bottom: 40px;
+        transform: translateY(-50%);
+        text-align: center;
+        color: white;
+        
+        .o-lead {
+            @extend %rel;
+            color: white;
+            
+            &--old {
+                font-size: rem(44);
+                
+                &:after {
+                    @extend %abs-pseudo;
+                    @extend %abs-y;
+                    width: 100%;
+                    height: 6px;
+                    background-color: $c-red-01;
+                }
+            }
+
+            &--current {
+                font-size: rem(40);
+            }
+        }
+    }
+    
+    .o-btn {
+        width: 100%;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	height: 116px;
+            border-radius: 58px;
+            font-size: rem(28);
+        }
+    }
+    
+    .o-header {
+        &.aligncenter {
+            max-width: 900px;
+        }
+        
+        .o-article {
+            max-width: none;
+        }
+        
+        .o-lead {
+            &--5 {
+                line-height: 1.25em;
+            }
+        }
+    }
+    
+    .o-list {
+        padding-top: 50px;
+        
+        li {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid $c-gray-01;
+            }
+        }
+        
+        p {
+            font-size: rem(24);
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 150px;
+    }
+}

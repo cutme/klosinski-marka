@@ -1,0 +1,67 @@
+.o-results {
+
+    dl {
+        @extend %flex;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: block;
+        	
+        }
+    }
+    
+    dt {
+        @extend %flex;
+        width: 200px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 16px;
+        }
+                
+        [class^="icon-"] {
+            
+            margin-right: 8px;
+        }
+    }
+    
+    dd {
+        flex: 1;
+        //width: 570px;
+    }
+    
+    &__item {
+        @extend %anim;
+        display: block;
+        margin-bottom: 144px;
+        margin-bottom: 72px;
+        padding-bottom: 72px;
+        opacity: 0;
+        
+        &.fade-in {
+            opacity: 1;
+        }
+        
+        @media ( max-width: $base + 64px ) {
+            padding-bottom: base(72);
+            margin-bottom: base(72);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	margin-bottom: 36px;
+        	padding-bottom: 36px;
+        }
+        
+        &:not(:last-of-type) {
+            border-bottom: 1px solid $c-gray-01;
+        }
+    }
+    
+    .o-lead {
+        a {
+            &:hover {
+                .desktop & {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

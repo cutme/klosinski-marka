@@ -1,0 +1,17 @@
+.c-afterintro {
+    
+    .o-article {
+        ol {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 152px;
+    }
+    
+    @media ( max-width: $smartphone + px ) {
+        //padding-top: 320px;
+    }
+}

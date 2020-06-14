@@ -1,0 +1,92 @@
+.c-counter {
+    
+    &__content {
+        @extend %rel;
+        @extend %flex;
+        @extend %flex-x;
+        margin: 0 auto;
+        
+        @media ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+            width: 280px;
+        }
+    }
+    
+    &__cta {
+        text-align: center;
+    }
+    
+    &__item {
+        @extend %rel;
+        @extend %flex-shrink;
+        width: 144px;
+        height: 144px;
+        margin: 0 52px;
+        border-radius: 50%;
+        background-color: $c-primary;
+        text-align: center;
+
+        @media ( max-width: $smartphone + px ) {
+            
+            &:nth-of-type(2) {
+                margin-left: 0 !important;
+            }
+            
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        
+        &:after, &:before {
+           @extend %abs-pseudo;
+        }
+        
+        &:after {
+            top: 50%;
+            right: 0;
+            transform: translate3d(52px, -50%, 0);
+            width: 1px; height: 36px;
+            background-color: $c-gray-02;
+        }
+        
+        &:last-of-type {
+            &:after {
+                display: none;
+            }
+        }
+        
+        &:before {
+            @extend %lead;
+            @extend %lead--6;
+            left: 0; top: 100%;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            transform: translate3d(0, 40px, 0);
+            content: attr(data-title);
+            
+            @media ( max-width: $smartphone + px ) {
+                font-size: rem(12);
+            }
+        }
+        
+        span {
+            @extend %lead;
+            @extend %flex;
+            @extend %flex-xy;
+            height: 100%;
+            font: {
+                size: rem(40);
+                weight: $heavy;
+            }
+        }
+    }
+    
+    .o-lead {
+        text-align: center;
+    }
+    
+    .o-section {
+        padding-bottom: 0;
+    }
+}

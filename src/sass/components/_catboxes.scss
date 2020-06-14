@@ -1,0 +1,49 @@
+.c-catboxes {
+    overflow: auto;
+
+    .o-box {
+     
+        @media ( max-width: $base + 64px ) {
+            min-height: base(344);
+        	margin-bottom: base(32);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	width: calc(50% -16px);
+        	margin: 0 8px 16px 8px;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+            width: 100%;
+        	height: auto;
+            margin: 0 0 16px 0;
+        	padding: 32px ;
+        }
+        
+        @media ( max-width: 375px ) {
+        	padding: 32px 24px;
+        }
+        
+        .icon-check {
+            flex-shrink: 0;
+        }
+        
+        .o-lead {
+            @extend %flex;
+            @extend %flex-y;
+            border-bottom: 1px solid $c-gray-01;
+            margin-bottom: 32px;
+            padding-bottom: 40px;
+            
+            &--5 {
+                font-weight: $heavy;
+                letter-spacing: normal;
+            }
+    
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 150px;
+    }
+}

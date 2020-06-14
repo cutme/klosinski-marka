@@ -1,0 +1,108 @@
+.c-thoughts {
+    
+    .o-lead {
+
+        &--2 {
+            @extend %flex;
+        }
+        
+        &--5 {
+            padding-right: 20px;
+            letter-spacing: normal;
+            line-height: 1.25em;
+            font-weight: $heavy;
+            
+            &:after {
+                content: '”.';
+            }
+            
+            &:before {
+                content: '„';
+            }
+        }
+        
+        
+    }
+
+    &__items {
+        .o-article {
+            
+            &:not(:last-of-type) {
+                margin-bottom: 80px;
+            }
+
+            h5 {
+                @extend %lead;
+                @extend %lead--5;
+                margin-bottom: 50px;
+                letter-spacing: normal;
+                font-weight: $heavy;
+            }
+
+            section {
+                @extend %rel;
+                padding-left: 100px;
+                
+                &:before {
+                    @extend %abs-pseudo;
+                    left: 0; top: -20px;
+                    width: 56px; height: 56px;
+                    background: {
+                        image: url(../img/photos/jacek-klosinski.png);
+                        repeat: no-repeat;
+                        size: contain;
+                        color: $c-primary;
+                    }
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    
+    .o-cols {
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: block;
+        }
+        
+        &__item {
+            &:last-of-type {
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    border-left: 1px solid $c-black-01;
+                    padding-left: 50px;                	
+                }
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                width: 100%;
+            }
+        }
+    }
+
+    .o-header {
+        .o-lead {
+            
+            @media ( min-width: $smartphone + 1px ) {
+                max-width: 520px;	
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	text-align: left;
+            }
+        }
+        
+        span {
+            padding-right: 20px;
+        }
+        
+        .icon-quote {
+            margin: 0 0 0 auto;
+            font-size: rem(82);
+        }
+    }
+    
+    .o-section {
+        padding-bottom: 0;
+    }
+}
