@@ -70,6 +70,11 @@
             @media ( max-width: $smartphone + px ) {
                 font-size: rem(12);
             }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                letter-spacing: normal;
+                font-size: rem(9);
+            }
         }
         
         span {
@@ -84,6 +89,16 @@
             
             @media ( max-width: $tablet + 64px ) {
                 font-size: tablet(40);
+            }
+        }
+    }
+    
+    .o-btn {
+        @media ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            padding: {
+                left: 0;
+                right: 0;
             }
         }
     }

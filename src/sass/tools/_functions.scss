@@ -17,6 +17,11 @@
 	@return ($target / $vw-context) * 1vw;
 }
 
+@function smartphone_portrait($target) {
+	$vw-context: (($smartphone_portrait) * 0.01);
+	@return ($target / $vw-context) * 1vw;
+}
+
 @function grid( $width, $context: $base ) {
     @return percentage( $width / $context );
 }

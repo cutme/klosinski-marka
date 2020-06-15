@@ -7,7 +7,7 @@
         padding: 0 90px 120px 90px;
         
         @media ( max-width: $tablet_portrait + px ) {
-        	padding: 0 45px 120px 45px;
+        	padding: 0 tablet_portrait(45) 120px tablet_portrait(45);
         }
     }
     
@@ -25,12 +25,21 @@
         text-align: center;
         color: white;
         
+        @media ( max-width: $smartphone_portrait + px ) {
+        	width: smartphone_portrait(284);
+        	height: smartphone_portrait(284);
+        }
+        
         .o-lead {
             @extend %rel;
             color: white;
             
             &--old {
                 font-size: rem(44);
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                	font-size: smartphone_portrait(44);
+                }
                 
                 &:after {
                     @extend %abs-pseudo;
@@ -43,6 +52,10 @@
 
             &--current {
                 font-size: rem(40);
+                
+                @media ( max-width: $smartphone_portrait + px ) {
+                	font-size: smartphone_portrait(40);
+                }
             }
         }
     }
@@ -80,7 +93,6 @@
             margin-bottom: 30px;
             padding-bottom: 30px;
             
-            
             &:not(:last-child) {
                 border-bottom: 1px solid $c-gray-01;
             }
@@ -88,6 +100,10 @@
         
         p {
             font-size: rem(24);
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	font-size: rem(18);
+            }
         }
     }
     

@@ -243,6 +243,10 @@
         //padding-left: 56px;
         padding-left: 80px;
         
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding-left: 60px;
+        }
+        
         &:before {
             @extend %abs-pseudo;
             @extend %flex;

@@ -62,6 +62,12 @@
                     margin-left: -46px;
                     margin-right: 60px;
                 }
+                
+                .c-presale__info {
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        left: -50%;
+                    }
+                }
             }
             
             &:nth-of-type(even) {
@@ -78,6 +84,11 @@
 
                 .c-presale__info {
                     text-align: right;
+                    
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        right: -50%;
+                        text-align: center;
+                    }
                 }
             }
             
@@ -93,12 +104,37 @@
     
     &__info {
         flex: 1;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            position: relative;
+        	flex: 100%;
+        	margin: 20px auto 0 auto;
+            text-align: center;
+        }
     }
     
     .o-btn {
         padding: {
             left: 80px;
             right: 80px;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            padding: {
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    
+    .o-header {
+        .o-lead {
+            &--2 {
+                @media ( max-width: $small + px ) {
+                    font-size: rem(22);
+                }
+            }
         }
     }
 }

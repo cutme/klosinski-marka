@@ -2,6 +2,20 @@
 
     &__cta {
         padding-left: 80px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding-left: 0;
+        }
+    }
+    
+    .o-btn {
+        @media ( max-width: $smartphone_portrait + px ) {
+            width: 100%;
+            padding: {
+                left: 0;
+                right: 0;
+            }
+        }
     }
 
     .o-cols {
@@ -28,14 +42,29 @@
 
     .o-header {
         
+        @media ( max-width: $tablet_portrait + px ) {
+            text-align: center;
+        }
+        
         img {
             background-color: $c-primary;
             border-radius: 50%;
             margin-bottom: 50px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	margin: 0 auto 50px auto;
+            }
         }
 
         .o-lead {
             max-width: 360px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                margin: {
+                    left: auto;
+                    right: auto;
+                }
+            }
             
             &--3 {
                 line-height: 1em;
@@ -49,5 +78,13 @@
     
     .o-section {
         padding-top: 150px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding-top: 80px;
+        }
+        
+        @media ( max-width: $small + px ) {
+        	padding-top: 64px;
+        }
     }
 }
