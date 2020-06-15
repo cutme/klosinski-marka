@@ -4,11 +4,14 @@
         @extend %rel;
         @extend %flex;
         @extend %flex-x;
-        margin: 0 auto;
+        margin: 0 auto 160px auto;
         
-        @media ( max-width: $smartphone + px ) {
-            flex-wrap: wrap;
-            width: 280px;
+        @media ( max-width: $tablet + px ) {
+        	margin-bottom: tablet(160);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	margin-bottom: 112px;
         }
     }
     
@@ -26,15 +29,10 @@
         background-color: $c-primary;
         text-align: center;
 
-        @media ( max-width: $smartphone + px ) {
-            
-            &:nth-of-type(2) {
-                margin-left: 0 !important;
-            }
-            
-            &:last-of-type {
-                margin-right: 0;
-            }
+        @media ( max-width: $tablet + 64px ) {
+        	width: tablet(144);
+        	height: tablet(144);
+        	margin: 0 tablet(52);
         }
         
         &:after, &:before {
@@ -47,6 +45,10 @@
             transform: translate3d(52px, -50%, 0);
             width: 1px; height: 36px;
             background-color: $c-gray-02;
+            
+            @media ( max-width: $tablet + 64px ) {
+                transform: translate3d(tablet(52), -50%, 0);
+            }
         }
         
         &:last-of-type {
@@ -78,6 +80,10 @@
             font: {
                 size: rem(40);
                 weight: $heavy;
+            }
+            
+            @media ( max-width: $tablet + 64px ) {
+                font-size: tablet(40);
             }
         }
     }

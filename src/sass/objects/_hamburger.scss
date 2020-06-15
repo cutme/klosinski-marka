@@ -17,6 +17,10 @@
     @media screen and ( max-width: $smartphone_portrait + px ) {
         width: 50px;
     }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        left: 20px;
+    }
 
     i {
         @extend %anim;

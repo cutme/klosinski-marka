@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded',function() {
     const init = function() {
         
         const action = function(e) {
-            
-            console.log('f');
 
             const parent = e.currentTarget.parentNode,
                   box = parent.parentNode.getElementsByClassName('js-box');
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded',function() {
             const title = el[h].getElementsByClassName('js-title');
             
             for (let i = 0; i < title.length; i ++) {
-                console.log(h + ' title');
                 title[i].addEventListener('click', action);
             }
         }

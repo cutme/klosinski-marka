@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let days, hours, minutes, seconds;
         
         endDate = new Date(endDate).getTime();
-        console.log(endDate);
+
         if (isNaN(endDate)) {
             return;
         }
