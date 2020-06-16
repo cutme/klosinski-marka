@@ -9,9 +9,13 @@
     
     .o-section {
         padding-bottom: 152px;
-    }
-    
-    @media ( max-width: $smartphone + px ) {
-        //padding-top: 320px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	padding-bottom: 80px;
+        }
+        
+        @media ( max-width: $small + px ) {
+        	padding-bottom: 64px;
+        }
     }
 }

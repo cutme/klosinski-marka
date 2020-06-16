@@ -129,6 +129,12 @@
     }
     
     .o-header {
+        max-width: 883px;
+        
+        .o-article {
+            max-width: none;
+        }
+        
         .o-lead {
             &--2 {
                 @media ( max-width: $small + px ) {

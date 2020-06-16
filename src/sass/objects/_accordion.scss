@@ -35,20 +35,24 @@
                     background-color: $c-black-01;
                     content: " ";
                 }
-            }
-            
-            &:hover {
-                .icon-plus {
-                    &:before {
-                        background-color: white;
-                    }
-                }
-            }
+            }            
             
             .o-list {
                 @extend %anim;
                 display: block;
                 opacity: 0;
+            }
+            
+            .o-title {
+                &:hover {
+                    .desktop & {
+                        .icon-plus {
+                            &:before {
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
             }
         }
         

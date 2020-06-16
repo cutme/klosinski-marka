@@ -37,6 +37,16 @@
                 margin-bottom: 50px;
                 letter-spacing: normal;
                 font-weight: $heavy;
+                
+                span {
+                    &:after {
+                        content: '”.';
+                    }
+
+                    &:before {
+                        content: '„';
+                    }
+                }
             }
 
             section {
@@ -70,7 +80,7 @@
                 
                 @media ( min-width: $tablet_portrait + 1px ) {
                     border-left: 1px solid $c-black-01;
-                    padding-left: 50px;                	
+                    padding-left: 52px;                	
                 }
             }
             

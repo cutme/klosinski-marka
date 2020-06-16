@@ -12,27 +12,8 @@
         .o-cols__item {
             
             @media ( min-width: $smartphone + 1px ) {
-                width: grid(570, $base);
-            }
-        }
-    }
-    
-    &--2f {
-        justify-content: flex-start;
-        
-        .o-cols__item { 
-            
-            &:first-of-type {
-                @media ( min-width: $smartphone + 1px ) {
-                    width: grid(570);
-                }
-            }
-            
-            &:last-of-type {
-                @media ( min-width: $smartphone + 1px ) {
-                    flex: 1;
-                }
-                //width: grid(600);
+                width: 50%;
+//                width: grid(585, $base);
             }
         }
     }

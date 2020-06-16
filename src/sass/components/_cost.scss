@@ -9,6 +9,14 @@
         @media ( max-width: $tablet_portrait + px ) {
         	padding: 0 tablet_portrait(45) 120px tablet_portrait(45);
         }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding-bottom: 80px;
+        }
+        
+        @media ( max-width: $small + px ) {
+            padding-bottom: 64px;
+        }
     }
     
     &__price {
@@ -28,6 +36,12 @@
         @media ( max-width: $smartphone_portrait + px ) {
         	width: smartphone_portrait(284);
         	height: smartphone_portrait(284);
+        	margin-top: 180px;
+        }
+        
+        @media ( max-width: $small + px ) {
+        	margin-top: 120px;
+        	padding-bottom: 20px;
         }
         
         .o-lead {
@@ -109,5 +123,13 @@
     
     .o-section {
         padding-bottom: 150px;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            padding-bottom: 80px;
+        }
+        
+        @media ( max-width: $small + px ) {
+            padding-bottom: 64px;
+        }
     }
 }

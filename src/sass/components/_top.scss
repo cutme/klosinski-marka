@@ -23,26 +23,44 @@
     }
     
     &__button {
+        @extend %anim;
         margin: 0 0 0 auto;
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+            opacity: 0;
+            pointer-events: none;
+            
+            .is-sticked & {
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
     }
 
     .o-logo {
         @extend %abs;
         @extend %abs-xy;
         
+        transform: translate3d(-50%, calc(-50% - 3px), 0);
+        
         @media ( max-width: $tablet_portrait + px ) {
         	width: 143px;
             height: 23px;
-        }
+        }        
     }
 
     &.is-sticked {
-        //position: fixed;
         border-bottom: 1px solid $c-gray-01;
         padding: {
             top: 16px;
             bottom: 16px;
         }
-//        transform: translateY(-50%);
+        
+        .o-logo {
+            @media ( max-width: $smartphone_portrait + px ) {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
     }
 }
