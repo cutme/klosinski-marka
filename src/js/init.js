@@ -1,6 +1,6 @@
 const { detect } = require('detect-browser');
 //const browser = detect();
-//import Blazy from 'blazy';
+import Blazy from 'blazy';
 
 document.addEventListener('DOMContentLoaded',function() {
     
