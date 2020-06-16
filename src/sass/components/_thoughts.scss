@@ -76,11 +76,18 @@
         }
         
         &__item {
+            
+            &:first-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    padding-right: 32px;
+                }
+            }
+            
             &:last-of-type {
                 
                 @media ( min-width: $tablet_portrait + 1px ) {
                     border-left: 1px solid $c-black-01;
-                    padding-left: 52px;                	
+                    padding-left: 52px;
                 }
             }
             
@@ -109,6 +116,10 @@
         .icon-quote {
             margin: 0 0 0 auto;
             font-size: rem(82);
+            
+            @media ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+            	font-size: rem(64);
+            }
         }
     }
     

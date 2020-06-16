@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',function() {
             } 
         }
     
-        const closeMenu = function() {
+        window.closeMenu = function() {
             enableBodyScroll(navmenu_content);
             apla.classList.remove('is-visible');
             navmenu.classList.remove('is-visible');            
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded',function() {
             
             setTimeout(function() {
                 document.addEventListener('click', checkClass);
-            }, 1000); 
+            }, 100); 
             
             e.preventDefault() ? e.preventDefault() : e.preventDefault = false;
         }

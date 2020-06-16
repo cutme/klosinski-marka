@@ -1,5 +1,10 @@
 .o-container {
     padding-top: 176px; 
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+        padding-top: 81px;
+    }
+    
     //padding-top: 192px; // without topticker
 
 /*

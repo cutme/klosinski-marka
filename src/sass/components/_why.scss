@@ -3,13 +3,13 @@
     &__cta {
         padding-left: 80px;
         
-        @media ( max-width: $smartphone_portrait + px ) {
+        @media ( max-width: $tablet + px ) {
             padding-left: 0;
         }
     }
     
     .o-btn {
-        @media ( max-width: $smartphone_portrait + px ) {
+        @media ( max-width: $tablet + px ) {
             width: 100%;
             padding: {
                 left: 0;
