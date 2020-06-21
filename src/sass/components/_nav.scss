@@ -21,6 +21,7 @@
         }
 
         a {
+            display: inline-block;
             text-transform: uppercase;
             letter-spacing: 1px;
             font: {
@@ -28,6 +29,7 @@
                 size: 12px;
                 weight: $regular;
             }
+            
             
             
             @media ( max-width: $menu + px ) {
@@ -40,8 +42,10 @@
             }
 
             &:hover {
-                .desktop & {
-                    border-bottom-color: $c-black-01;
+                @media ( min-width: $menu + px ) {
+                    .desktop & {
+                        transform: translate3d(0, -5px, 0);
+                    }
                 }
             }
         }
